@@ -19,8 +19,12 @@ or
 npm install walky-talky --save
 ```
 
-## Usage
+## Purpose
+If you ever want to create a channel where anyone can subscribe to the custom action types and associate a custom handler with it, Then based on some event it is published with the action type. The subscriber who had subscribed to this event will get notified and the handler which was associated with it while subscribing will be called with params.
 
+This can also act as a communication bridge between two applications.
+
+## Usage
 ```js
 // module.js
 import WalkyTalky from "walky-talky";
