@@ -8,8 +8,11 @@ npm-debug.log
 yarn-dubug.log
 
 #vscode settings
-.vscode
+#.vscode
 
 # IDE dependencies
 .idea
 .idea/*
+
+#build
+dist

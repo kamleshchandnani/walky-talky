@@ -12,23 +12,12 @@
             "modules": false,
             "useBuiltIns": false
           }
-        ]
+        ],
+        "minify"
       ]
     },
     "cjs": {
-      "presets": [
-        [
-          "kamlesh",
-          {
-            "targets": {
-              "browsers": ["last 2 Chrome versions", "safari >=11"]
-            },
-            "loose": false,
-            "modules": false,
-            "useBuiltIns": false
-          }
-        ]
-      ]
+      "presets": ["kamlesh", "minify"]
     }
   }
 }

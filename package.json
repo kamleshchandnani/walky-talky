@@ -4,15 +4,15 @@
   "author": "Kamlesh Chandnani <kamlesh.chandnani@gmail.com>",
   "license": "ISC",
   "homepage": "https://github.com/kamleshchandnani/walky-talky#readme",
-  "description": "A small JS library to address the problem of assigning multiple listeners for the same event/action type using Publish/Subscribe pattern",
+  "description": "A tiny JS library to create a message channel using Publish/Subscribe pattern",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "files": ["dist"],
   "scripts": {
     "clean": "rimraf dist",
-    "build": "run-s clean && run-p build:es build:cjs build:lib:es",
-    "build:es": "NODE_ENV=es rollup -c",
-    "build:cjs": "NODE_ENV=cjs rollup -c",
+    "build": "run-s clean && mkdir dist && run-p build:es build:cjs",
+    "build:es": "NODE_ENV=es babel index.js -o dist/index.es.js",
+    "build:cjs": "NODE_ENV=cjs babel index.js -o dist/index.js",
     "precommit": "lint-staged"
   },
   "repository": {
@@ -28,17 +28,12 @@
     "babel-eslint": "^8.0.2",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-kamlesh": "git+https://github.com/kamleshchandnani/babel-preset-kamlesh.git",
+    "babel-preset-minify": "^0.2.0",
     "eslint": "^4.11.0",
     "eslint-config-kamlesh": "git+https://github.com/kamleshchandnani/eslint-config-kamlesh.git",
     "husky": "^0.14.3",
     "lint-staged": "^5.0.0",
     "npm-run-all": "^4.1.2",
-    "rollup": "^0.51.7",
-    "rollup-plugin-babel": "^3.0.2",
-    "rollup-plugin-commonjs": "^8.2.6",
-    "rollup-plugin-filesize": "^1.4.2",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-uglify": "^2.0.1",
     "uglify-es": "^3.2.2"
   }
 }
