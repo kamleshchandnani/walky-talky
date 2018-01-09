@@ -7,6 +7,12 @@
 
 EventListeners can easily go out of hand if not used with utmost care, walky-talky is a tiny JS library to create a message channel using Publish/Subscribe pattern.
 
+## Purpose
+If you ever want to create a channel where anyone can subscribe to the custom action types and associate a custom handler with it, Then based on some event it is published with the action type. The subscriber who had subscribed to this event will get notified and the handler which was associated with it while subscribing will be called with params.
+
+This can also act as a communication bridge between two applications.
+
+
 ## Installation
 
 ```
@@ -18,11 +24,6 @@ or
 ```
 npm install walky-talky --save
 ```
-
-## Purpose
-If you ever want to create a channel where anyone can subscribe to the custom action types and associate a custom handler with it, Then based on some event it is published with the action type. The subscriber who had subscribed to this event will get notified and the handler which was associated with it while subscribing will be called with params.
-
-This can also act as a communication bridge between two applications.
 
 ## Usage
 ```js
